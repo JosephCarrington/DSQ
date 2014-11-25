@@ -1,0 +1,23 @@
+{
+  "name": "DSQ_Wordpress",
+  "version": "1.0.0",
+  "description": "DSQ Wordpress Theme",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JosephCarrington/DSQ.git"
+  },
+  "author": "Joseph Carrington",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JosephCarrington/DSQ/issues"
+  },
+  "homepage": "https://github.com/JosephCarrington/DSQ",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-less": "^0.12.0",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
