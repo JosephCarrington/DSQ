@@ -2,8 +2,171 @@
 Theme Name: DSQ
 */
 
+/* Reset! */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@white: #f9fbfb;
+@black: #1c1c1c;
+@brand-base: #df5911;
+@brand-secondary: #72cfdf;
+
+@font-size-base: 18px;
+
 body
 {
-	background-color: red;
-	color: black;
+	font-family: 'lato', sans-serif;
+	font-weight: 300;
+	color: @black;
+	background-color: @white;
+	font-size: @font-size-base;
+}
+
+#main-header
+{
+	background-color: @brand-base;
+	color: @white;
+	position: fixed;
+	width: 100%;
+
+	h1
+	{
+		color: @white;
+		font-family: 'lato', sans-serif;
+	}
+
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+#title-and-menu-button-wrapper
+{
+	overflow: auto;
+}
+
+#site-title
+{
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: @font-size-base * 2;
+	float: left;
+	margin: @font-size-base;
+}
+
+#menu-button
+{
+	margin: @font-size-base * 1.5;
+	width: 32px;
+	height: 32px;
+	float: right;
+}
+
+#main-navigation
+{
+	ul, li
+	{
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	li
+	{
+		font-size: @font-size-base * 1.5;
+		padding: 0.25em 1em;
+		background-color: @white;
+	}
+
+	li a
+	{
+		color: @black;
+		text-decoration: none;
+	}
+
+	li:nth-child(1)
+	{
+		background-color: @brand-secondary;
+	}
+	li:nth-child(2)
+	{
+		background-color: lighten(@brand-secondary, 5%);
+	}
+	li:nth-child(3)
+	{
+		background-color: lighten(@brand-secondary, 10%);
+	}
+	li:nth-child(4)
+	{
+		background-color: lighten(@brand-secondary, 15%);
+	}
+	li:nth-child(5)
+	{
+		background-color: lighten(@brand-secondary, 20%);
+	}
+	li:nth-child(6)
+	{
+		background-color: lighten(@brand-secondary, 25%);
+	}
+	li:nth-child(7)
+	{
+		background-color: lighten(@brand-secondary, 30%);
+	}
+}
+
+/* General Styles */
+.content-body
+{
+	padding: 1em;
+	text-align: justify;
+}
+
+#main-content
+{
+	padding-top: @font-size-base * 5;
+}
+
+/* Typography */
+p
+{
+	margin-bottom: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+	color: @brand-base;
+	font-family: "utopia-std", serif;
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+h1
+{
+	font-size: @font-size-base * 1.5;
+}
+
+/* Page Headers */
+.content-header
+{
+	padding: 1em;
+
+	h1,
+	h2
+	{
+		color: @black;
+	}
+
+	h3
+	{
+		color: @white;
+		text-shadow: 0px 0px 5px rgba(150, 150, 150, 1);
+	}
 }

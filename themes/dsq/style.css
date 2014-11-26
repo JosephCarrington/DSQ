@@ -1,7 +1,118 @@
 /*
 Theme Name: DSQ
 */
+/* Reset! */
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
-  background-color: red;
-  color: black;
+  font-family: 'lato', sans-serif;
+  font-weight: 300;
+  color: #1c1c1c;
+  background-color: #f9fbfb;
+  font-size: 18px;
+}
+#main-header {
+  background-color: #df5911;
+  color: #f9fbfb;
+  position: fixed;
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+#main-header h1 {
+  color: #f9fbfb;
+  font-family: 'lato', sans-serif;
+}
+#title-and-menu-button-wrapper {
+  overflow: auto;
+}
+#site-title {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 36px;
+  float: left;
+  margin: 18px;
+}
+#menu-button {
+  margin: 27px;
+  width: 32px;
+  height: 32px;
+  float: right;
+}
+#main-navigation ul,
+#main-navigation li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#main-navigation li {
+  font-size: 27px;
+  padding: 0.25em 1em;
+  background-color: #f9fbfb;
+}
+#main-navigation li a {
+  color: #1c1c1c;
+  text-decoration: none;
+}
+#main-navigation li:nth-child(1) {
+  background-color: #72cfdf;
+}
+#main-navigation li:nth-child(2) {
+  background-color: #87d6e4;
+}
+#main-navigation li:nth-child(3) {
+  background-color: #9cdde8;
+}
+#main-navigation li:nth-child(4) {
+  background-color: #b0e4ed;
+}
+#main-navigation li:nth-child(5) {
+  background-color: #c5ebf2;
+}
+#main-navigation li:nth-child(6) {
+  background-color: #daf2f7;
+}
+#main-navigation li:nth-child(7) {
+  background-color: #eff9fb;
+}
+/* General Styles */
+.content-body {
+  padding: 1em;
+  text-align: justify;
+}
+#main-content {
+  padding-top: 90px;
+}
+/* Typography */
+p {
+  margin-bottom: 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #df5911;
+  font-family: "utopia-std", serif;
+  text-align: center;
+  margin-bottom: 1em;
+}
+h1 {
+  font-size: 27px;
+}
+/* Page Headers */
+.content-header {
+  padding: 1em;
+}
+.content-header h1,
+.content-header h2 {
+  color: #1c1c1c;
+}
+.content-header h3 {
+  color: #f9fbfb;
+  text-shadow: 0px 0px 5px #969696;
 }

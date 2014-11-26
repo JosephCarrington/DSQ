@@ -10,6 +10,9 @@ module.exports = function(grunt) {
 			},
 			php: {
 				files: ["*.php"]
+			},
+			js: {
+				files: ["*.js"]
 			}
 		},
 		less: {
