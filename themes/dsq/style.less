@@ -13,6 +13,7 @@ Theme Name: DSQ
 @black: #1c1c1c;
 @brand-base: #df5911;
 @brand-secondary: #72cfdf;
+@brand-accent-grey: #95A0A3;
 
 @font-size-base: 18px;
 
@@ -148,15 +149,41 @@ h6
 	margin-bottom: 1em;
 }
 
-h1
+blockquote
 {
+	color: @brand-secondary;
+	font-family: "utopia-std", serif;
+	text-align: center;
 	font-size: @font-size-base * 1.5;
+
+	cite
+	{
+		display: block;
+		color: @brand-accent-grey;
+		font-style: normal;
+		font-family: "lato", sans-serif; 
+		font-size: @font-size-base;
+	}
 }
 
 /* Page Headers */
 .content-header
 {
 	padding: 1em;
+
+	h1
+	{
+		font-size: @font-size-base * 3;
+		font-weight: 200;
+		margin-bottom: 0;
+	}
+
+	h2
+	{
+		font-size: @font-size-base * 2;
+		font-weight: 200;
+		margin-bottom: 0;
+	}
 
 	h1,
 	h2
@@ -168,5 +195,8 @@ h1
 	{
 		color: @white;
 		text-shadow: 0px 0px 5px rgba(150, 150, 150, 1);
+		font-family: 'lato', sans-serif;
+		text-transform: uppercase;
+		font-size: @font-size-base;
 	}
 }
