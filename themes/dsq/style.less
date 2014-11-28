@@ -200,3 +200,21 @@ blockquote
 		font-size: @font-size-base;
 	}
 }
+
+/* Lists */
+.content-body ul
+{
+	list-style-image: url('images/bullet-points.png');
+	padding: 1em;
+
+	@media 
+	(-webkit-min-device-pixel-ratio: 2), 
+	(min-resolution: 192dpi) { 
+		list-style-image: url('images/bullet-points2x.png');
+	}
+
+	li
+	{
+		margin-bottom: 1em;
+	}
+}

@@ -139,3 +139,16 @@ blockquote cite {
   text-transform: uppercase;
   font-size: 18px;
 }
+/* Lists */
+.content-body ul {
+  list-style-image: url('images/bullet-points.png');
+  padding: 1em;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .content-body ul {
+    list-style-image: url('images/bullet-points2x.png');
+  }
+}
+.content-body ul li {
+  margin-bottom: 1em;
+}
