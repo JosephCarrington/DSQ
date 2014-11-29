@@ -190,3 +190,10 @@ blockquote cite {
 #footer-sidebar {
   list-style-type: none;
 }
+/* Breakpoints */
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) {
+  .content-body {
+    max-width: 640px;
+  }
+}
