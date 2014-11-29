@@ -84,7 +84,10 @@ body {
   text-align: justify;
 }
 #main-content {
-  padding-top: 90px;
+  padding-top: 81px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 /* Typography */
 p {
@@ -144,11 +147,46 @@ blockquote cite {
   list-style-image: url('images/bullet-points.png');
   padding: 1em;
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .content-body ul {
-    list-style-image: url('images/bullet-points2x.png');
-  }
-}
 .content-body ul li {
   margin-bottom: 1em;
+}
+/* Registration Callout */
+.registration-callout {
+  padding: 1em;
+  text-align: center;
+  border: 2px solid #df5911;
+  background: #f9fbfb;
+  margin: 0 1em;
+  -webkit-box-shadow: inset 0px 0px 5px 0px #df5911;
+  -moz-box-shadow: inset 0px 0px 5px 0px #df5911;
+  box-shadow: inset 0px 0px 5px 0px #df5911;
+}
+/* Course Description */
+.dsq-course-inner .course-header {
+  background: rgba(223, 89, 17, 0.75);
+  padding: 1em;
+}
+.dsq-course-inner h4 {
+  color: #f9fbfb;
+  font-weight: 200;
+  font-size: 36px;
+  margin-bottom: 0;
+}
+.dsq-course-inner h5 {
+  font-weight: 200;
+  color: #1c1c1c;
+  font-size: 27px;
+  font-family: 'lato', sans-serif;
+  margin-bottom: 0;
+}
+.dsq-course-inner .course-body {
+  padding: 1em;
+}
+/* Footer */
+#main-footer {
+  background: #df5911;
+  padding: 1em;
+}
+#footer-sidebar {
+  list-style-type: none;
 }

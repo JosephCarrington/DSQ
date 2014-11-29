@@ -13,6 +13,9 @@
 					get_template_part('content', 'front');
 				endwhile;
 			?>
+			<ul id='content-bottom'>
+				<?php dynamic_sidebar('content-bottom'); ?>
+			</ul>
 		</article><!-- #main-content -->
 
 	<?php endwhile; ?>

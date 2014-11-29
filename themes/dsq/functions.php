@@ -10,6 +10,41 @@ add_action('after_setup_theme', function() {
 	register_nav_menu('primary', 'Top Navigation');
 });
 
+add_action('widgets_init', function() {
+	register_sidebar(array(
+		'name' => 'Bottom of Main Content',
+		'id' => 'content-bottom'
+	));
+
+	register_sidebar(array(
+		'name' => 'Footer',
+		'id' => 'footer'
+	));
+});
+
+/* Shortcodes... */
+add_shortcode('dsq_course_inner', function($atts, $content = null) {
+	$a = shortcode_atts( array(
+		'title' => 'Title',
+		'subtitle' => 'subtitle',
+		'subsubtitle' => 'subsubtitle'
+	), $atts);
+	$return = "<div class='dsq-course-inner'>";
+		$return .= "<div class='course-header'>";
+			$return .= "<h4>" . $a['title'] . "</h4>";
+			$return .= "<h4>" . $a['subtitle'] . "</h4>";
+			$return .= "<h5>" . $a['subsubtitle'] . "</h5>";
+		$return .= "</div>";
+		$return .= "<div class='course-body'>" . do_shortcode($content) . "</div>";
+	$return .= "</div>";
+
+	return $return;
+});
+
+add_shortcode('dsq_course_outer', function($atts, $content = null) {
+	return "</div><div class='dsq-course-outer'>" . do_shortcode($content) . "</div><div class='content-body'>";
+});
+
 function hex2rgb($hex) {
    $hex = str_replace("#", "", $hex);
 
