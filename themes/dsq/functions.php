@@ -42,7 +42,7 @@ add_shortcode('dsq_course_inner', function($atts, $content = null) {
 });
 
 add_shortcode('dsq_course_outer', function($atts, $content = null) {
-	return "</div><div class='dsq-course-outer'>" . do_shortcode($content) . "</div><div class='content-body'>";
+	return "</div><div class='dsq-course-outer'>" . str_replace('<br />', '', do_shortcode($content)) . "</div><div class='content-body'>";
 });
 
 function hex2rgb($hex) {
