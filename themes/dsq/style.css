@@ -189,6 +189,7 @@ blockquote cite {
 /* Footer */
 #content-bottom {
   padding: 1em;
+  list-style-type: none;
 }
 #main-footer {
   background: #df5911;
