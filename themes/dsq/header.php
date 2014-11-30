@@ -24,7 +24,7 @@
 <body <?php body_class(); ?>>
 <header id='main-header'>
 	<div id='title-and-menu-button-wrapper'>
-		<h1 id='site-title'>
+		<h1 id='site-title'><a href='<?php bloginfo('url'); ?>' title='Home'>
 			<?php
 				// A little script to emphasize the first word.
 				$site_title = get_bloginfo('name');
@@ -38,7 +38,7 @@
 
 				echo $title_string;
 			?>
-		</h1>
+		</a></h1>
 
 		<i id='menu-button'>
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32">
