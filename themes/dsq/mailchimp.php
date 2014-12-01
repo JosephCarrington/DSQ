@@ -1,5 +1,4 @@
 <!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 <div id="mc_embed_signup">
 <form action="//datasociety.us9.list-manage.com/subscribe/post?u=05cc8f7aee6a36a5f081f197a&amp;id=7e048eecb3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
