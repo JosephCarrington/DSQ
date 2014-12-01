@@ -16,7 +16,7 @@ body {
 #main-header {
   background-color: #df5911;
   color: #f9fbfb;
-  position: fixed;
+  position: relative;
   width: 100%;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -254,5 +254,8 @@ blockquote cite {
   .gf_browser_chrome {
     max-width: 640px !important;
     margin: auto !important;
+  }
+  #main-header {
+    position: fixed;
   }
 }
