@@ -307,6 +307,12 @@ blockquote
 	z-index: 999;
 }
 
+
+#container
+{
+	padding: 1em;
+}
+
 /* Breakpoints */
 /* iPads (portrait and landscape) ----------- */
 @media only screen 
@@ -371,9 +377,15 @@ and (min-width : 768px) {
 		position: fixed;
 	}
 
-	#main-content
+	#main-content, #container
 	{
 		padding-top: @font-size-base * 4.5;
+	}
+
+	#container
+	{
+		max-width: 960px;
+		margin: auto;
 	}
 }
 
