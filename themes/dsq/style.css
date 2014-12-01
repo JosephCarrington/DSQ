@@ -198,6 +198,19 @@ blockquote cite {
 #footer-sidebar {
   list-style-type: none;
 }
+/* Gross Hacks */
+#mc_embed_signup_scroll {
+  font-size: 13.5px;
+  padding: 0.5em;
+  margin: auto;
+  overflow: auto;
+}
+#mc_embed_signup_scroll div,
+#mc_embed_signup_scroll label,
+#mc_embed_signup_scroll input {
+  float: left;
+  margin: 0 0.25em;
+}
 /* Breakpoints */
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-width: 768px) {
@@ -227,5 +240,12 @@ blockquote cite {
     padding: 1em;
     text-align: center;
     font-size: 13.5px;
+  }
+  #mc_embed_signup_scroll {
+    float: right;
+    padding: 1em;
+  }
+  #mc_embed_signup {
+    overflow: auto;
   }
 }

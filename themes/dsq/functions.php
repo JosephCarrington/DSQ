@@ -20,6 +20,11 @@ add_action('widgets_init', function() {
 		'name' => 'Footer',
 		'id' => 'footer'
 	));
+
+	register_sidebar(array(
+		'name' => 'Under Header',
+		'id' => 'subheader'
+	));
 });
 
 /* Shortcodes... */

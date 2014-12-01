@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 	<?php if(have_posts()) while(have_posts()) : the_post(); ?>
 		<article id='main-content'>
+			<?php get_template_part('mailchimp', 'front'); ?>
 			<?php get_template_part('content', 'front'); ?>
 			<?php
 				$children = new WP_Query(array(
