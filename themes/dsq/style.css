@@ -212,7 +212,6 @@ blockquote cite {
   margin: 0 0.25em;
 }
 #main-header {
-  position: relative;
   z-index: 999;
 }
 /* Breakpoints */
