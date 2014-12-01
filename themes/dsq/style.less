@@ -120,6 +120,11 @@ body
 	}
 }
 
+#main-navigation-large
+{
+	display: none;
+}
+
 /* General Styles */
 .content-body
 {
@@ -518,6 +523,45 @@ and (min-width : 768px) {
 	{
 		max-width: 960px;
 		margin: auto;
+	}
+
+	#menu-button
+	{
+		display: none;
+	}
+
+	#site-title
+	{
+		font-size: @font-size-base * 3;
+	}
+
+	#main-navigation-large
+	{
+		display: block;
+		float: right;
+		font-size: @font-size-base * 0.75;
+		font-weight: 700;
+		padding: 1em;
+		text-transform: uppercase;
+
+		-moz-column-count: 2;
+		-moz-column-gap: 1em;
+		-webkit-column-count: 2;
+		-webkit-column-gap: 1em;
+		column-count: 2;
+		column-gap: 1em;
+
+		ul
+		{
+			list-style-type: none;
+			text-align: center;
+
+			a
+			{
+				color: @black;
+				text-decoration: none;
+			}
+		}
 	}
 }
 
