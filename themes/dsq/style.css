@@ -185,6 +185,20 @@ blockquote cite {
 .dsq-course-inner .course-body {
   padding: 1em;
 }
+/* Register Button */
+.dsq-register {
+  background: transparent url('images/register-bg.png') top center no-repeat;
+  min-width: 110px;
+  height: 81px;
+  color: #f9fbfb;
+  text-decoration: none;
+  padding: 1.6em 2em 0 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: 30px;
+  display: block;
+}
 /* Footer */
 #content-bottom {
   padding: 1em;
@@ -215,6 +229,11 @@ blockquote cite {
 }
 #container {
   padding: 1em;
+}
+@media only screen and (max-width: 767px) {
+  .column {
+    width: 100% !important;
+  }
 }
 /* Breakpoints */
 /* iPads (portrait and landscape) ----------- */

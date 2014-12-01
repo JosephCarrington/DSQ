@@ -28,6 +28,17 @@ add_action('widgets_init', function() {
 });
 
 /* Shortcodes... */
+add_shortcode('dsq_register', function($atts) {
+	$a = shortcode_atts( array(
+		'text' => 'Register Now',
+		'link_id' => 0
+	), $atts);
+
+	$product_link = get_permalink($a['link_id']);
+	$return = "<a href='$product_link' title='Register' class='dsq-register'>" . $a['text'] . "</a>";
+	return $return;
+});
+
 add_shortcode('dsq_course_inner', function($atts, $content = null) {
 	$a = shortcode_atts( array(
 		'title' => 'Title',
