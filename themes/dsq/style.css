@@ -251,4 +251,8 @@ blockquote cite {
   #mc_embed_signup {
     overflow: auto;
   }
+  .gf_browser_chrome {
+    max-width: 640px;
+    margin: auto;
+  }
 }
