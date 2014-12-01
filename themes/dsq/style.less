@@ -14,6 +14,7 @@ Theme Name: DSQ
 @brand-base: #df5911;
 @brand-secondary: #72cfdf;
 @brand-accent-grey: #95A0A3;
+@brand-accent-red: #b81417;
 
 @font-size-base: 18px;
 
@@ -283,6 +284,106 @@ blockquote
 	margin-left: 30px;
 
 	display: block;
+}
+
+.dsq-giant-register
+{
+	background: @brand-accent-red;
+	color: @white;
+	overflow: auto;
+	padding: 1em;
+
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+
+	.dsq-giant-register-left,
+	.dsq-giant-register-right,
+	{
+		box-sizing: border-box;
+		padding: 0 1em;
+		overflow: auto;
+		text-align: center;
+
+		@media only screen 
+		and (min-width : 768px) {
+			float:left;
+			box-sizing: border-box;
+			width: 50%;
+		}
+	}
+
+	.dsq-giant-register-left
+	{
+		@media only screen 
+		and (min-width : 768px) {
+			border-right: 2px solid @brand-secondary;
+		}
+	}
+
+	.dsq-register-price,
+	.dsq-register-subtext
+	{
+		font-family: 'utopia-std', serif;
+
+	}
+
+	.dsq-register-price
+	{
+		font-size: @font-size-base * 4;
+		@media only screen 
+		and (min-width : 768px) {
+			float: left;
+			font-size: @font-size-base * 10;
+		}
+	}
+
+	.dsq-register-subtext
+	{
+		@media only screen 
+		and (min-width : 768px) {
+			float: right;
+			text-align: right;
+			font-size: @font-size-base * 2.5;
+			width: 33%;
+			margin-top: 0.5em;
+			margin-right: 1em;
+		}
+
+	}
+
+	.dsq-register-subtext-2
+	{
+		color: @brand-secondary;
+		font-size: @font-size-base * 2;
+	}
+	
+	.dsq-giant-register-right
+	{
+		text-align: center;
+
+		@media only screen 
+		and (min-width : 768px) {
+			text-align: left;
+			padding-top: 1em;
+			padding-left: 3em;
+		}
+	}
+
+	.dsq-giant-register-link
+	{
+		color: @white;
+		text-decoration: none;
+		font-size: @font-size-base * 3;
+		font-weight: 700;
+		text-transform: uppercase;
+		@media only screen 
+		and (min-width : 768px) {
+			font-size: @font-size-base * 4;
+			margin-top: 0.25em;
+			display: block;
+		}
+	}
 }
 
 /* Footer */

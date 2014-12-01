@@ -39,6 +39,35 @@ add_shortcode('dsq_register', function($atts) {
 	return $return;
 });
 
+add_shortcode('dsq_giant_register', function($atts) {
+	$a = shortcode_atts( array(
+		'text' => 'Sign up now!',
+		'price' => '$0',
+		'text_2' => 'early bird discount',
+		'text_3' => 'ends Dec. 19',
+		'link_id' => 0
+	), $atts);
+
+	$product_link = get_permalink($a['link_id']);
+	$return = "</div>";
+	$return .= "<div class='dsq-giant-register'>";
+		$return .= "<div class='dsq-giant-register-left'>";
+			$return .= "<div class='dsq-register-price'>" . $a['price'] . "</div>";
+			$return .= "<div class='dsq-register-subtext'>";
+				$return .= "<div class='dsq-register-subtext-1'>" . $a['text_2'] . "</div>";
+				$return .= "<div class='dsq-register-subtext-2'>" . $a['text_3'] . "</div>";
+			$return .= "</div>";
+		$return .= "</div>";
+		$return .= "<div class='dsq-giant-register-right'>";
+			$return .= "<a href='$product_link' title='Register' class='dsq-giant-register-link'>" . $a['text'] . "</a>";
+		$return .= "</div>";
+	$return .= "</div>";
+	$return .= "<div class='content-body'>";
+
+	return $return;
+});
+
+
 add_shortcode('dsq_course_inner', function($atts, $content = null) {
 	$a = shortcode_atts( array(
 		'title' => 'Title',

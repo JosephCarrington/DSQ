@@ -199,6 +199,86 @@ blockquote cite {
   margin-left: 30px;
   display: block;
 }
+.dsq-giant-register {
+  background: #b81417;
+  color: #f9fbfb;
+  overflow: auto;
+  padding: 1em;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.dsq-giant-register .dsq-giant-register-left,
+.dsq-giant-register .dsq-giant-register-right {
+  box-sizing: border-box;
+  padding: 0 1em;
+  overflow: auto;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .dsq-giant-register .dsq-giant-register-left,
+  .dsq-giant-register .dsq-giant-register-right {
+    float: left;
+    box-sizing: border-box;
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .dsq-giant-register .dsq-giant-register-left {
+    border-right: 2px solid #72cfdf;
+  }
+}
+.dsq-giant-register .dsq-register-price,
+.dsq-giant-register .dsq-register-subtext {
+  font-family: 'utopia-std', serif;
+}
+.dsq-giant-register .dsq-register-price {
+  font-size: 72px;
+}
+@media only screen and (min-width: 768px) {
+  .dsq-giant-register .dsq-register-price {
+    float: left;
+    font-size: 180px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .dsq-giant-register .dsq-register-subtext {
+    float: right;
+    text-align: right;
+    font-size: 45px;
+    width: 33%;
+    margin-top: 0.5em;
+    margin-right: 1em;
+  }
+}
+.dsq-giant-register .dsq-register-subtext-2 {
+  color: #72cfdf;
+  font-size: 36px;
+}
+.dsq-giant-register .dsq-giant-register-right {
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .dsq-giant-register .dsq-giant-register-right {
+    text-align: left;
+    padding-top: 1em;
+    padding-left: 3em;
+  }
+}
+.dsq-giant-register .dsq-giant-register-link {
+  color: #f9fbfb;
+  text-decoration: none;
+  font-size: 54px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 768px) {
+  .dsq-giant-register .dsq-giant-register-link {
+    font-size: 72px;
+    margin-top: 0.25em;
+    display: block;
+  }
+}
 /* Footer */
 #content-bottom {
   padding: 1em;
