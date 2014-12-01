@@ -252,7 +252,7 @@ blockquote cite {
     overflow: auto;
   }
   .gf_browser_chrome {
-    max-width: 640px;
-    margin: auto;
+    max-width: 640px !important;
+    margin: auto !important;
   }
 }
