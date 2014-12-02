@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Data Society |   Intro to Data Science: R, Visualization, Classification, Clustering, Regression</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://datasociety.co/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="http://datasociety.co/wp-content/themes/dsq/js/html5.js"></script>
+	<![endif]-->
+	<link rel='stylesheet' id='flick-css'  href='http://datasociety.co/wp-content/plugins/mailchimp//css/flick/flick.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='mailchimpSF_main_css-css'  href='http://datasociety.co/?mcsf_action=main_css&#038;ver=4.0.1' type='text/css' media='all' />
+<!--[if IE]>
+<link rel='stylesheet' id='mailchimpSF_ie_css-css'  href='http://datasociety.co/wp-content/plugins/mailchimp/css/ie.css?ver=4.0.1' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='columns-css'  href='http://datasociety.co/wp-content/plugins/columns/columns.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-layout-css'  href='//datasociety.co/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=2.2.8' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='//datasociety.co/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=2.2.8' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css'  href='//datasociety.co/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=2.2.8' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css'  href='http://datasociety.co/wp-content/themes/dsq/style.css?ver=4.0.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://datasociety.co/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+<script type='text/javascript' src='http://datasociety.co/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://datasociety.co/wp-content/plugins/mailchimp/js/scrollTo.js?ver=1.4.2'></script>
+<script type='text/javascript' src='http://datasociety.co/wp-includes/js/jquery/jquery.form.min.js?ver=3.37.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mailchimpSF = {"ajax_url":"http:\/\/datasociety.co\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://datasociety.co/wp-content/plugins/mailchimp/js/mailchimp.js?ver=1.4.2'></script>
+<script type='text/javascript' src='http://datasociety.co/wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.4'></script>
+<script type='text/javascript' src='http://datasociety.co/wp-content/plugins/mailchimp//js/datepicker.js?ver=4.0.1'></script>
+<script type='text/javascript' src='//use.typekit.net/mxv7pqv.js?ver=4.0.1'></script>
+<script type='text/javascript' src='http://datasociety.co/wp-includes/js/jquery/jquery.color.min.js?ver=2.1.1'></script>
+<script type='text/javascript' src='http://datasociety.co/wp-content/themes/dsq/js/main.js?ver=4.0.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://datasociety.co/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://datasociety.co/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.0.1" />
+<meta name="generator" content="WooCommerce 2.2.8" />
+<link rel='canonical' href='http://datasociety.co/product/course-registration/' />
+<link rel='shortlink' href='http://datasociety.co/?p=181' />
+	<script type="text/javascript">
+		jQuery(function($) {
+			$('.date-pick').each(function() {
+				var format = $(this).data('format') || 'mm/dd/yyyy';
+				format = format.replace(/yyyy/i, 'yy');
+				$(this).datepicker({
+					autoFocusNextInput: true,
+					constrainInput: false,
+					changeMonth: true,
+					changeYear: true,
+					beforeShow: function(input, inst) { $('#ui-datepicker-div').addClass('show'); },
+					dateFormat: format.toLowerCase(),
+				});
+			});
+			d = new Date();
+			$('.birthdate-pick').each(function() {
+				var format = $(this).data('format') || 'mm/dd';
+				format = format.replace(/yyyy/i, 'yy');
+				$(this).datepicker({
+					autoFocusNextInput: true,
+					constrainInput: false,
+					changeMonth: true,
+					changeYear: false,
+					minDate: new Date(d.getFullYear(), 1-1, 1),
+					maxDate: new Date(d.getFullYear(), 12-1, 31),
+					beforeShow: function(input, inst) { $('#ui-datepicker-div').removeClass('show'); },
+					dateFormat: format.toLowerCase(),
+				});
+
+			});
+
+		});
+	</script>
+	<link rel="alternate" type="application/rss+xml"  title="New products" href="http://datasociety.co/shop/feed/" />
+<!-- WooCommerce Google Analytics Integration -->
+
+<script>
+	var gaProperty = 'UA-57190991-1';
+	var disableStr = 'ga-disable-' + gaProperty;
+	if (document.cookie.indexOf(disableStr + '=true') > -1) {
+		window[disableStr] = true;
+	}
+	function gaOptout() {
+		document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+		window[disableStr] = true;
+	}
+</script>
+
+<script type='text/javascript'>
+	var _gaq = _gaq || [];
+	_gaq.push(
+		['_setAccount', 'UA-57190991-1'], 
+		['_setCustomVar', 1, 'logged-in', 'no', 1],
+		['_trackPageview']
+	);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+<!-- /WooCommerce Google Analytics Integration -->
+
+	<script>try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body class="single single-product postid-181 woocommerce woocommerce-page">
+<header id='main-header'>
+	<div id='title-and-menu-button-wrapper'>
+		<h1 id='site-title'><a href='http://datasociety.co' title='Home'>
+			<strong>Data</strong> Society		</a></h1>
+
+		<nav id='main-navigation-large' role='navigation'>
+			<ul id="menu-primary" class="menu"><li id="menu-item-9" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9"><a href="http://datasociety.co/">Bootcamp</a></li>
+<li id="menu-item-207" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-207"><a href="http://datasociety.co/#header-10">Course Details</a></li>
+<li id="menu-item-208" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-208"><a href="http://datasociety.co/#header-12">Why Take This Course?</a></li>
+<li id="menu-item-205" class="menu-item menu-item-type-post_type menu-item-object-product current-menu-item menu-item-205"><a href="http://datasociety.co/product/course-registration/">Register</a></li>
+<li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="http://datasociety.co/jobs/">Work with Us</a></li>
+<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="http://datasociety.co/about-us/">About Us</a></li>
+<li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="http://datasociety.co/faq/">FAQ</a></li>
+</ul>		</nav>
+		<ul id='nav-social'>
+			<li id="text-5" class="widget widget_text">			<div class="textwidget"><a href='https://www.facebook.com/pages/Data-Society/734069426663239' title='Facebook'><img src='http://datasociety.co/wp-content/uploads/2014/12/fbicon29.png' /></a></div>
+		</li>
+<li id="text-6" class="widget widget_text">			<div class="textwidget"><a href='http://twitter.com/datasocietyco' title='Twitter'><img src='http://datasociety.co/wp-content/uploads/2014/12/twittericon29.png' /></a></div>
+		</li>
+<li id="text-7" class="widget widget_text">			<div class="textwidget"><a href='https://www.linkedin.com/company/data-society' title='LinkedIn'><img src='http://datasociety.co/wp-content/uploads/2014/12/linkedinicon29.png' /></a></div>
+		</li>
+		</ul>
+		<i id='menu-button'>
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32">
+				<rect x="0" y="3" fill="#fff" width="32" height="5" rx="3" ry="3"/>
+				<rect x="0" y="14" fill="#fff" width="32" height="5" rx="3" ry="3"/>
+				<rect x="0" y="25" fill="#fff" width="32" height="5" rx="3" ry="3"/>
+			</svg>
+		</i><!-- #menu-button -->
+	</div><!-- #title-and-menu-button-wrapper -->
+	<nav id='main-navigation' role='navigation'>
+		<ul id="menu-primary-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9"><a href="http://datasociety.co/">Bootcamp</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-207"><a href="http://datasociety.co/#header-10">Course Details</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-208"><a href="http://datasociety.co/#header-12">Why Take This Course?</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-product current-menu-item menu-item-205"><a href="http://datasociety.co/product/course-registration/">Register</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="http://datasociety.co/jobs/">Work with Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="http://datasociety.co/about-us/">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="http://datasociety.co/faq/">FAQ</a></li>
+</ul>	</nav>
+</header>
+
+	<div id="container"><div id="content" role="main"><nav class="woocommerce-breadcrumb" itemprop="breadcrumb"><a class="home" href="http://datasociety.co">Home</a> &#47; Intro to Data Science: R, Visualization, Classification, Clustering, Regression</nav>
+		
+			
+
+<div itemscope itemtype="http://schema.org/Product" id="product-181" class="post-181 product type-product status-publish has-post-thumbnail sale virtual sold-individually shipping-taxable purchasable product-type-simple instock">
+
+	
+	<span class="onsale">Sale!</span>
+<div class="images">
+
+	<a href="http://datasociety.co/wp-content/uploads/2014/12/Intro-to-DS.png" itemprop="image" class="woocommerce-main-image zoom" title="Intro-to-DS" data-rel="prettyPhoto"><img width="300" height="300" src="http://datasociety.co/wp-content/uploads/2014/12/Intro-to-DS-300x300.png" class="attachment-shop_single wp-post-image" alt="Intro-to-DS" title="Intro-to-DS" /></a>
+	
+</div>
+
+	<div class="summary entry-summary">
+
+		<h1 itemprop="name" class="product_title entry-title">Intro to Data Science: R, Visualization, Classification, Clustering, Regression</h1><div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+
+	<p class="price"><del><span class="amount">&#36;699.00</span></del> <ins><span class="amount">&#36;499.00</span></ins></p>
+
+	<meta itemprop="price" content="499" />
+	<meta itemprop="priceCurrency" content="USD" />
+	<link itemprop="availability" href="http://schema.org/InStock" />
+
+</div><div itemprop="description">
+	<p>We’ll show you how to analyze data quickly and easily using the same methods professional data scientists use. And we’ll teach you in language you already understand.</p>
+<p>In just 24 hours over 4 weeks, you&#8217;ll build a toolkit using R, a free open source programming language. You&#8217;ll learn about visualizations, classification, regression analysis, clustering, and more.</p>
+<p>No prior programming experience required.</p>
+</div>
+
+
+	
+	<form class="cart" method="post" enctype='multipart/form-data'>
+	 	
+	 	
+	 	<input type="hidden" name="add-to-cart" value="181" />
+
+	 	<button type="submit" class="single_add_to_cart_button button alt">Add to cart</button>
+
+			</form>
+
+	
+<div class="product_meta">
+
+	
+	
+	
+	
+	
+</div>
+
+	</div><!-- .summary -->
+
+	
+	<div class="woocommerce-tabs">
+		<ul class="tabs">
+			
+				<li class="description_tab">
+					<a href="#tab-description">Description</a>
+				</li>
+
+					</ul>
+		
+			<div class="panel entry-content" id="tab-description">
+				
+  <h2>Product Description</h2>
+
+<h1><strong>Early bird discount ends December 19, 2014!</strong></h1>
+<p>We’ll show you how to analyze data quickly and easily using the same methods professional data scientists use. And we’ll teach you in language you already understand. The good news is you have the most important ingredient you’ll need: expertise in your field.</p>
+<p>You know your business best. That’s why you should be the one working with your data. In just 4 weeks, you’ll build a toolkit using R, a free open source programming language. When you’re done, you’ll be able to ask questions and pose problems like a data scientist. You’ll have the tools to implement, execute, and explain your predictive models and algorithms. And you’ll be able to create beautiful visualizations to share your insights with others.</p>
+<p>This course covers the following topics in an accessible, engaging way:</p>
+<ul>
+<li>Structuring data problems</li>
+<li>Thinking like a data scientist</li>
+<li>A primer on programming and visualizations</li>
+<li>k-Nearest Neighbors</li>
+<li>Naive Bayes</li>
+<li>Logistic regression</li>
+<li>Decision trees</li>
+<li>Random forests</li>
+<li>K-means</li>
+<li>Hierarchical clustering</li>
+<li>Simple linear regression</li>
+<li>Functional regression</li>
+<li>Multivariate regression</li>
+<li>Locally weighted scatterplot smoothing (LOWESS)</li>
+</ul>
+<p>&nbsp;</p>
+<p><em>Syllabus is subject to change.</em></p>
+<h1>No prior programming experience required.</h1>
+			</div>
+
+			</div>
+
+
+	<meta itemprop="url" content="http://datasociety.co/product/course-registration/" />
+
+</div><!-- #product-181 -->
+
+
+		
+	</div></div>
+		<div id="sidebar" role="complementary">
+		<ul>
+						<li>
+				<form role="search" method="get" id="searchform" class="searchform" action="http://datasociety.co/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>			</li>
+
+			<!-- Author information is disabled per default. Uncomment and fill in your details if you want to use it.
+			<li><h2>Author</h2>
+			<p>A little something about you, the author. Nothing lengthy, just an overview.</p>
+			</li>
+			-->
+
+					</ul>
+		<ul role="navigation">
+			<li class="pagenav"><h2>Pages</h2><ul><li class="page_item page-item-18"><a href="http://datasociety.co/about-us/">About Us</a></li>
+<li class="page_item page-item-179"><a href="http://datasociety.co/checkout/">Checkout</a></li>
+<li class="page_item page-item-20"><a href="http://datasociety.co/faq/">FAQ</a></li>
+<li class="page_item page-item-7 page_item_has_children"><a href="http://datasociety.co/">Intro to Data Science</a>
+<ul class='children'>
+	<li class="page_item page-item-12"><a href="http://datasociety.co/home/why-take-this-course/">Why Take this Course?</a></li>
+	<li class="page_item page-item-10"><a href="http://datasociety.co/home/course-details/">Course Details</a></li>
+</ul>
+</li>
+<li class="page_item page-item-180"><a href="http://datasociety.co/my-account/">My Account</a></li>
+<li class="page_item page-item-14"><a href="http://datasociety.co/register/">Register</a></li>
+<li class="page_item page-item-177 current_page_parent"><a href="http://datasociety.co/shop/">Register for the Course</a></li>
+<li class="page_item page-item-16"><a href="http://datasociety.co/jobs/">Work with Us</a></li>
+<li class="page_item page-item-178"><a href="http://datasociety.co/cart/">Your Cart</a></li>
+</ul></li>
+			<li><h2>Archives</h2>
+				<ul>
+					<li><a href='http://datasociety.co/2014/11/'>November 2014</a></li>
+				</ul>
+			</li>
+
+			<li class="categories"><h2>Categories</h2><ul>	<li class="cat-item cat-item-1"><a href="http://datasociety.co/category/uncategorized/" >Uncategorized</a> (1)
+</li>
+</ul></li>		</ul>
+		<ul>
+			
+					</ul>
+	</div>
+
+<div id='main-footer'>
+	<ul id='footer-sidebar'>
+		<li id="text-2" class="widget widget_text">			<div class="textwidget"><strong>&copy; 2014 DATA SOCIETY.</strong> All rights reserved. Made in DC</div>
+		</li>
+	</ul>
+</div><!-- #main-footer -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+  ga('create', 'UA-57190991-1', 'auto');
+  ga('send', 'pageview');
+ 
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","ajax_loader_url":"\/\/datasociety.co\/wp-content\/plugins\/woocommerce\/assets\/images\/ajax-loader@2x.gif","i18n_view_cart":"View Cart","cart_url":"http:\/\/datasociety.co\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","ajax_loader_url":"\/\/datasociety.co\/wp-content\/plugins\/woocommerce\/assets\/images\/ajax-loader@2x.gif","i18n_view_cart":"View Cart","cart_url":"http:\/\/datasociety.co\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//datasociety.co/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=2.2.8'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_single_product_params = {"i18n_required_rating_text":"Please select a rating","review_rating_required":"yes"};
+var wc_single_product_params = {"i18n_required_rating_text":"Please select a rating","review_rating_required":"yes"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//datasociety.co/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js?ver=2.2.8'></script>
+<script type='text/javascript' src='//datasociety.co/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.60'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","ajax_loader_url":"\/\/datasociety.co\/wp-content\/plugins\/woocommerce\/assets\/images\/ajax-loader@2x.gif"};
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","ajax_loader_url":"\/\/datasociety.co\/wp-content\/plugins\/woocommerce\/assets\/images\/ajax-loader@2x.gif"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//datasociety.co/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=2.2.8'></script>
+<script type='text/javascript' src='//datasociety.co/wp-content/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.min.js?ver=1.3.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","fragment_name":"wc_fragments"};
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","fragment_name":"wc_fragments"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//datasociety.co/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=2.2.8'></script>
+<!-- WooCommerce JavaScript -->
+<script type="text/javascript">
+jQuery(function($) {
+
+	$( '.single_add_to_cart_button' ).click( function() {
+		_gaq.push(['_trackEvent', 'Products', 'Add to Cart', '#181']);
+	});
+
+
+
+	$( '.add_to_cart_button:not(.product_type_variable, .product_type_grouped)' ).click( function() {
+		_gaq.push(['_trackEvent', 'Products', 'Add to Cart', ($(this).data('product_sku')) ? ('SKU: ' + $(this).data('product_sku')) : ('#' + $(this).data('product_id'))]);
+	});
+
+});
+</script>
+</body>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+
+ Served from: datasociety.co @ 2014-12-02 22:26:15 by W3 Total Cache -->

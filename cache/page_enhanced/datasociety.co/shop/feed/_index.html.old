@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Data Society &#187; Products</title>
+	<atom:link href="http://datasociety.co/shop/feed/" rel="self" type="application/rss+xml" />
+	<link>http://datasociety.co</link>
+	<description></description>
+	<lastBuildDate>Tue, 02 Dec 2014 18:04:08 +0000</lastBuildDate>
+	<language>en-US</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=4.0.1</generator>
+	<item>
+		<title>Course Registration</title>
+		<link>http://datasociety.co/product/course-registration/</link>
+		<comments>http://datasociety.co/product/course-registration/#comments</comments>
+		<pubDate>Mon, 01 Dec 2014 00:58:58 +0000</pubDate>
+		<dc:creator><![CDATA[joecarrot]]></dc:creator>
+		
+		<guid isPermaLink="false">http://datasociety.co/?post_type=product&#038;p=181</guid>
+		<description><![CDATA[In just 4 weeks, we can help you build a toolkit using R, a free open source programming language. You'll learn about visualizations, clustering, classification, and regression analysis.
+
+When you’re done, you’ll have the tools to implement, execute, and explain your predictive models and algorithms. You’ll know if data looks wrong, if patterns make sense, if insights are brilliant or back to the drawing board bad. You’ll be able to ask questions and pose problems like a data scientist.
+
+No prior programming experience required.]]></description>
+				<content:encoded><![CDATA[<h1><strong>Early bird discount until December 19, 2014!</strong></h1>
+<p>In just 4 weeks, we can help you build a toolkit using R, a free open source programming language. R is widely used in corporations that do extensive data mining, like Google and Amazon. But R is easy to learn and there are many existing scripts that make analyzing and visualizing data a breeze. We’ll show you how.</p>
+<p>When you’re done, you’ll have the tools to implement, execute, and explain your predictive models and algorithms. You’ll know if data looks wrong, if patterns make sense, if insights are brilliant or back to the drawing board bad. You’ll be able to ask questions and pose problems like a data scientist.</p>
+<p>This course covers the following topics in an accessible, engaging way:</p>
+<ul>
+<li><strong>Introduction to R</strong></li>
+<li><strong>Visualizations</strong></li>
+<li><strong>Classification &amp; Customer Behavior</strong></li>
+<li><strong>Clustering &amp; Mining Your Social Media</strong></li>
+<li><strong>Regression</strong></li>
+</ul>
+<p>&nbsp;</p>
+<h1>No prior programming experience required.</h1>
+]]></content:encoded>
+			<wfw:commentRss>http://datasociety.co/product/course-registration/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+
+ Served from: datasociety.co @ 2014-12-02 18:05:58 by W3 Total Cache -->
