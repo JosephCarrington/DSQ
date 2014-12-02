@@ -36,6 +36,7 @@ body {
   font-size: 27px;
   float: left;
   margin: 18px;
+  margin-bottom: 0;
 }
 #menu-button {
   margin: 27px;
@@ -80,6 +81,9 @@ body {
   background-color: #eff9fb;
 }
 #main-navigation-large {
+  display: none;
+}
+#nav-social {
   display: none;
 }
 /* General Styles */
@@ -183,7 +187,7 @@ blockquote cite {
   color: #1c1c1c;
   font-size: 18px;
   font-family: 'lato', sans-serif;
-  margin-bottom: 0;
+  margin-top: 1em;
 }
 .dsq-course-inner .course-body {
   padding: 1em;
@@ -201,6 +205,15 @@ blockquote cite {
   text-align: center;
   margin-left: 30px;
   display: block;
+}
+@media only screen and (min-width: 768px) {
+  .dsq-register {
+    margin-left: 0;
+  }
+}
+.dsq-giant-register-wrapper {
+  max-width: 960px;
+  margin: auto;
 }
 .dsq-giant-register {
   background: #b81417;
@@ -241,22 +254,22 @@ blockquote cite {
 @media only screen and (min-width: 768px) {
   .dsq-giant-register .dsq-register-price {
     float: left;
-    font-size: 180px;
+    font-size: 108px;
+    line-height: 108px;
+    width: 50%;
   }
 }
 @media only screen and (min-width: 768px) {
   .dsq-giant-register .dsq-register-subtext {
-    float: right;
+    float: left;
     text-align: right;
-    font-size: 45px;
-    width: 33%;
-    margin-top: 0.5em;
-    margin-right: 1em;
+    font-size: 36px;
+    width: 50%;
   }
 }
 .dsq-giant-register .dsq-register-subtext-2 {
   color: #72cfdf;
-  font-size: 36px;
+  font-size: 27px;
 }
 .dsq-giant-register .dsq-giant-register-right {
   text-align: center;
@@ -264,8 +277,6 @@ blockquote cite {
 @media only screen and (min-width: 768px) {
   .dsq-giant-register .dsq-giant-register-right {
     text-align: left;
-    padding-top: 1em;
-    padding-left: 3em;
   }
 }
 .dsq-giant-register .dsq-giant-register-link {
@@ -277,9 +288,8 @@ blockquote cite {
 }
 @media only screen and (min-width: 768px) {
   .dsq-giant-register .dsq-giant-register-link {
-    font-size: 72px;
-    margin-top: 0.25em;
     display: block;
+    margin-top: .33em;
   }
 }
 /* Footer */
@@ -316,10 +326,16 @@ blockquote cite {
 .woocommerce #sidebar {
   display: none;
 }
+.column {
+  text-align: center;
+}
 @media only screen and (max-width: 767px) {
   .column {
     width: 100% !important;
   }
+}
+a {
+  color: #b81417;
 }
 /* Breakpoints */
 /* iPads (portrait and landscape) ----------- */
@@ -341,7 +357,7 @@ blockquote cite {
     margin: auto;
     overflow: auto;
     clear: both;
-    background: transparent url('images/course-leaf.jpg') center 2.5em no-repeat;
+    background: transparent url('images/course-leaf.jpg') center 40px no-repeat;
   }
   .dsq-course-inner {
     float: left;
@@ -384,7 +400,7 @@ blockquote cite {
     float: right;
     font-size: 13.5px;
     font-weight: 700;
-    padding: 1em;
+    padding: 1em 1em 0;
     text-transform: uppercase;
     -moz-column-count: 2;
     -moz-column-gap: 1em;
@@ -403,5 +419,18 @@ blockquote cite {
   }
   #main-navigation-large ul a:hover {
     color: #f9fbfb;
+  }
+  #nav-social {
+    clear: both;
+    display: block;
+    float: right;
+    list-style-type: none;
+    padding: 0 3em 1em;
+  }
+  #nav-social li {
+    display: inline-block;
+  }
+  #nav-social li a {
+    text-decoration: none;
   }
 }

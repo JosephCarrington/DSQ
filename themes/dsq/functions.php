@@ -2,7 +2,7 @@
 // Register stylesheets
 add_action('wp_enqueue_scripts', function() {
 	wp_enqueue_script('typekit', '//use.typekit.net/mxv7pqv.js');
-	wp_enqueue_script('main', get_stylesheet_directory_uri() . '/js/main.js', ['jquery', 'jquery-color']);
+	wp_enqueue_script('main', get_stylesheet_directory_uri() . '/js/main.js', array('jquery', 'jquery-color'));
 	wp_enqueue_style('style', get_stylesheet_uri());
 });
 
@@ -24,6 +24,11 @@ add_action('widgets_init', function() {
 	register_sidebar(array(
 		'name' => 'Under Header',
 		'id' => 'subheader'
+	));
+
+	register_sidebar(array(
+		'name' => 'Social Section',
+		'id' => 'social'
 	));
 });
 
@@ -51,15 +56,17 @@ add_shortcode('dsq_giant_register', function($atts) {
 	$product_link = get_permalink($a['link_id']);
 	$return = "</div>";
 	$return .= "<div class='dsq-giant-register'>";
-		$return .= "<div class='dsq-giant-register-left'>";
-			$return .= "<div class='dsq-register-price'>" . $a['price'] . "</div>";
-			$return .= "<div class='dsq-register-subtext'>";
-				$return .= "<div class='dsq-register-subtext-1'>" . $a['text_2'] . "</div>";
-				$return .= "<div class='dsq-register-subtext-2'>" . $a['text_3'] . "</div>";
+		$return .= "<div class='dsq-giant-register-wrapper'>";
+			$return .= "<div class='dsq-giant-register-left'>";
+				$return .= "<div class='dsq-register-price'>" . $a['price'] . "</div>";
+				$return .= "<div class='dsq-register-subtext'>";
+					$return .= "<div class='dsq-register-subtext-1'>" . $a['text_2'] . "</div>";
+					$return .= "<div class='dsq-register-subtext-2'>" . $a['text_3'] . "</div>";
+				$return .= "</div>";
 			$return .= "</div>";
-		$return .= "</div>";
-		$return .= "<div class='dsq-giant-register-right'>";
-			$return .= "<a href='$product_link' title='Register' class='dsq-giant-register-link'>" . $a['text'] . "</a>";
+			$return .= "<div class='dsq-giant-register-right'>";
+				$return .= "<a href='$product_link' title='Register' class='dsq-giant-register-link'>" . $a['text'] . "</a>";
+			$return .= "</div>";
 		$return .= "</div>";
 	$return .= "</div>";
 	$return .= "<div class='content-body'>";
