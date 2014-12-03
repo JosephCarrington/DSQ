@@ -333,6 +333,9 @@ blockquote cite {
 .woocommerce #sidebar {
   display: none;
 }
+.header-home {
+  margin-top: 4em;
+}
 @media only screen and (max-width: 767px) {
   .column {
     width: 100% !important;
