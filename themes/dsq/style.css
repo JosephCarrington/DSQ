@@ -393,6 +393,8 @@ blockquote cite {
   #main-navigation-large ul {
     list-style-type: none;
     text-align: center;
+    float: left;
+    margin-right: 1em;
   }
   #main-navigation-large ul a {
     color: #1c1c1c;
