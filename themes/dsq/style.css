@@ -224,8 +224,10 @@ blockquote cite {
 }
 .dsq-giant-register .dsq-giant-register-left,
 .dsq-giant-register .dsq-giant-register-right {
-  box-sizing: border-box;
   padding: 0 1em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   overflow: auto;
   text-align: center;
 }
