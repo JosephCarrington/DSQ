@@ -158,13 +158,13 @@ blockquote cite {
 /* Lists */
 .content-body ul,
 .entry-content ul,
-.course-description ul {
+.course-body ul {
   list-style-image: url('images/bullet-points.png');
   padding: 1em;
 }
 .content-body ul li,
 .entry-content ul li,
-.course-description ul li {
+.course-body ul li {
   margin-bottom: 1em;
 }
 /* Registration Callout */
