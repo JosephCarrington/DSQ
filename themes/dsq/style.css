@@ -379,6 +379,9 @@ blockquote cite {
   #container {
     padding-top: 81px;
   }
+  .single-product #container {
+    padding-top: 108px;
+  }
   #container {
     max-width: 960px;
     margin: auto;
