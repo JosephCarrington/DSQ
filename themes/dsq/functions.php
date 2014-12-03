@@ -9,6 +9,7 @@ add_action('wp_enqueue_scripts', function() {
 add_action('after_setup_theme', function() {
 	register_nav_menu('primary_left', 'Top Navigation - Left');
 	register_nav_menu('primary_right', 'Top Navigation - Right');
+	register_nav_menu('primary_mobile', 'Top Navigation - Mobile');
 });
 
 add_action('widgets_init', function() {
