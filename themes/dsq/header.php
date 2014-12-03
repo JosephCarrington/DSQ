@@ -56,7 +56,11 @@
 	</div><!-- #title-and-menu-button-wrapper -->
 	<nav id='main-navigation' role='navigation'>
 		<?php wp_nav_menu(array(
-			'theme_location' => 'primary',
+			'theme_location' => 'primary_left',
+			'container' => ''
+		)); ?>
+		<?php wp_nav_menu(array(
+			'theme_location' => 'primary_right',
 			'container' => ''
 		)); ?>
 	</nav>
