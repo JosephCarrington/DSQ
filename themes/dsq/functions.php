@@ -101,6 +101,9 @@ add_shortcode('dsq_course_outer', function($atts, $content = null) {
 	return "</div><div class='dsq-course-outer'>" . str_replace('<br />', '', do_shortcode($content)) . "</div><div class='content-body'>";
 });
 
+// Hax
+remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
+
 function hex2rgb($hex) {
    $hex = str_replace("#", "", $hex);
 
