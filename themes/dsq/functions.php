@@ -7,7 +7,8 @@ add_action('wp_enqueue_scripts', function() {
 });
 
 add_action('after_setup_theme', function() {
-	register_nav_menu('primary', 'Top Navigation');
+	register_nav_menu('primary_left', 'Top Navigation - Left');
+	register_nav_menu('primary_right', 'Top Navigation - Right');
 });
 
 add_action('widgets_init', function() {
