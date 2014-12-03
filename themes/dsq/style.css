@@ -8,6 +8,7 @@ Theme Name: DSQ
 }
 img {
   max-width: 100%;
+  height: auto;
 }
 body {
   font-family: 'lato', sans-serif;
