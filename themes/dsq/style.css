@@ -187,6 +187,7 @@ blockquote cite {
   font-size: 18px;
   font-family: 'lato', sans-serif;
   margin-bottom: 0;
+  margin-top: 1em;
 }
 .dsq-course-inner .course-body {
   padding: 1em;
@@ -343,7 +344,7 @@ blockquote cite {
     margin: auto;
     overflow: auto;
     clear: both;
-    background: transparent url('images/course-leaf.jpg') center 2.5em no-repeat;
+    background: transparent url('images/course-leaf.jpg') center 40px no-repeat;
   }
   .dsq-course-inner {
     float: left;
