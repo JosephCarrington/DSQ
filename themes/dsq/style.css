@@ -156,11 +156,13 @@ blockquote cite {
   padding: 8em 0 3em;
 }
 /* Lists */
-.content-body ul {
+.content-body ul,
+.entry-content ul {
   list-style-image: url('images/bullet-points.png');
   padding: 1em;
 }
-.content-body ul li {
+.content-body ul li,
+.entry-content ul li {
   margin-bottom: 1em;
 }
 /* Registration Callout */
