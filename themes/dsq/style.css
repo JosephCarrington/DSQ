@@ -171,6 +171,11 @@ blockquote cite {
   box-shadow: inset 0px 0px 5px 0px #df5911;
 }
 /* Course Description */
+.dsq-course-inner {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 .dsq-course-inner .course-header {
   background: rgba(223, 89, 17, 0.75);
   padding: 1em;
