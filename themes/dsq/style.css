@@ -389,12 +389,6 @@ blockquote cite {
     font-weight: 700;
     padding: 1em;
     text-transform: uppercase;
-    -moz-column-count: 2;
-    -moz-column-gap: 1em;
-    -webkit-column-count: 2;
-    -webkit-column-gap: 1em;
-    column-count: 2;
-    column-gap: 1em;
   }
   #main-navigation-large ul {
     list-style-type: none;
