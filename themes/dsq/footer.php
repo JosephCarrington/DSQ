@@ -2,6 +2,10 @@
 	<ul id='footer-sidebar'>
 		<?php dynamic_sidebar('footer'); ?>
 	</ul>
+		<ul id='nav-social'>
+			<?php dynamic_sidebar('social'); ?>
+		</ul>
+
 </div><!-- #main-footer -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

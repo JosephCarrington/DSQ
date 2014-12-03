@@ -46,9 +46,6 @@
 				'container' => ''
 			)); ?>
 		</nav>
-		<ul id='nav-social'>
-			<?php dynamic_sidebar('social'); ?>
-		</ul>
 		<i id='menu-button'>
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32">
 				<rect x="0" y="3" fill="#fff" width="32" height="5" rx="3" ry="3"/>

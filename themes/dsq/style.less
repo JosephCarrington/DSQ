@@ -146,6 +146,11 @@ p
 	margin-bottom: 1em;
 }
 
+a
+{
+	color: @brand-accent-red;
+}
+
 h1,
 h2,
 h3,
@@ -271,6 +276,7 @@ blockquote
 	.course-body
 	{
 		padding: 1em;
+		font-size: @font-size-base;
 	}
 }
 
@@ -297,6 +303,7 @@ blockquote
 	color: @white;
 	overflow: auto;
 	padding: 1em;
+	font-size: @font-size-base * 2;
 
 	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
@@ -318,11 +325,18 @@ blockquote
 		}
 	}
 
+	.dsq-giant-register-link
+	{
+		color: @white;
+		text-decoration: none;
+	}
+
 	.dsq-giant-register-left
 	{
 		@media only screen 
 		and (min-width : 768px) {
 			border-right: 2px solid @brand-secondary;
+			text-align: right;
 		}
 	}
 
@@ -335,24 +349,25 @@ blockquote
 
 	.dsq-register-price
 	{
-		font-size: @font-size-base * 4;
 		@media only screen 
 		and (min-width : 768px) {
-			float: left;
-			font-size: @font-size-base * 10;
+			font-size: @font-size-base * 4;
+			line-height: @font-size-base * 4;
+
 		}
+	}
+
+	.dsq-giant-register-wrapper
+	{
+		max-width: 960px;
+		margin: auto;
+		overflow: auto;
 	}
 
 	.dsq-register-subtext
 	{
 		@media only screen 
 		and (min-width : 768px) {
-			float: right;
-			text-align: right;
-			font-size: @font-size-base * 2.5;
-			width: 33%;
-			margin-top: 0.5em;
-			margin-right: 1em;
 		}
 
 	}
@@ -360,7 +375,6 @@ blockquote
 	.dsq-register-subtext-2
 	{
 		color: @brand-secondary;
-		font-size: @font-size-base * 2;
 	}
 	
 	.dsq-giant-register-right
@@ -370,23 +384,16 @@ blockquote
 		@media only screen 
 		and (min-width : 768px) {
 			text-align: left;
-			padding-top: 1em;
-			padding-left: 3em;
 		}
-	}
-
-	.dsq-giant-register-link
-	{
-		color: @white;
-		text-decoration: none;
-		font-size: @font-size-base * 3;
-		font-weight: 700;
-		text-transform: uppercase;
-		@media only screen 
-		and (min-width : 768px) {
-			font-size: @font-size-base * 4;
-			margin-top: 0.25em;
-			display: block;
+		
+		.giant-register-text
+		{
+			@media only screen 
+			and (min-width : 768px) {
+				font-size: @font-size-base * 3;
+				display: block;
+				margin-top: 0.5em;
+			}
 		}
 	}
 }
@@ -396,18 +403,32 @@ blockquote
 {
 	padding: 1em;
 	list-style-type: none;
+	text-align: center;
 }
 
 #main-footer
 {
 	background: @brand-base;
 	padding: 1em;
+	overflow: auto;
 }
 
 #footer-sidebar
 {
 	list-style-type: none;
+	float: left;
 }
+
+#nav-social
+{
+	list-style-type: none;
+	float: right;
+	li
+	{
+		display: inline-block;
+	}
+}
+	
 
 /* Gross Hacks */
 #mc_embed_signup_scroll

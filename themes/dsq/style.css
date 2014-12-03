@@ -36,7 +36,6 @@ body {
   font-size: 27px;
   float: left;
   margin: 18px;
-  margin-bottom: 0;
 }
 #menu-button {
   margin: 27px;
@@ -83,9 +82,6 @@ body {
 #main-navigation-large {
   display: none;
 }
-#nav-social {
-  display: none;
-}
 /* General Styles */
 .content-body {
   padding: 1em;
@@ -99,6 +95,9 @@ body {
 /* Typography */
 p {
   margin-bottom: 1em;
+}
+a {
+  color: #b81417;
 }
 h1,
 h2,
@@ -187,10 +186,11 @@ blockquote cite {
   color: #1c1c1c;
   font-size: 18px;
   font-family: 'lato', sans-serif;
-  margin-top: 1em;
+  margin-bottom: 0;
 }
 .dsq-course-inner .course-body {
   padding: 1em;
+  font-size: 18px;
 }
 /* Register Button */
 .dsq-register {
@@ -206,20 +206,12 @@ blockquote cite {
   margin-left: 30px;
   display: block;
 }
-@media only screen and (min-width: 768px) {
-  .dsq-register {
-    margin-left: 0;
-  }
-}
-.dsq-giant-register-wrapper {
-  max-width: 960px;
-  margin: auto;
-}
 .dsq-giant-register {
   background: #b81417;
   color: #f9fbfb;
   overflow: auto;
   padding: 1em;
+  font-size: 36px;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -239,37 +231,33 @@ blockquote cite {
     width: 50%;
   }
 }
+.dsq-giant-register .dsq-giant-register-link {
+  color: #f9fbfb;
+  text-decoration: none;
+}
 @media only screen and (min-width: 768px) {
   .dsq-giant-register .dsq-giant-register-left {
     border-right: 2px solid #72cfdf;
+    text-align: right;
   }
 }
 .dsq-giant-register .dsq-register-price,
 .dsq-giant-register .dsq-register-subtext {
   font-family: 'utopia-std', serif;
 }
-.dsq-giant-register .dsq-register-price {
-  font-size: 72px;
-}
 @media only screen and (min-width: 768px) {
   .dsq-giant-register .dsq-register-price {
-    float: left;
-    font-size: 108px;
-    line-height: 108px;
-    width: 50%;
+    font-size: 72px;
+    line-height: 72px;
   }
 }
-@media only screen and (min-width: 768px) {
-  .dsq-giant-register .dsq-register-subtext {
-    float: left;
-    text-align: right;
-    font-size: 36px;
-    width: 50%;
-  }
+.dsq-giant-register .dsq-giant-register-wrapper {
+  max-width: 960px;
+  margin: auto;
+  overflow: auto;
 }
 .dsq-giant-register .dsq-register-subtext-2 {
   color: #72cfdf;
-  font-size: 27px;
 }
 .dsq-giant-register .dsq-giant-register-right {
   text-align: center;
@@ -279,30 +267,34 @@ blockquote cite {
     text-align: left;
   }
 }
-.dsq-giant-register .dsq-giant-register-link {
-  color: #f9fbfb;
-  text-decoration: none;
-  font-size: 54px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
 @media only screen and (min-width: 768px) {
-  .dsq-giant-register .dsq-giant-register-link {
+  .dsq-giant-register .dsq-giant-register-right .giant-register-text {
+    font-size: 54px;
     display: block;
-    margin-top: .33em;
+    margin-top: 0.5em;
   }
 }
 /* Footer */
 #content-bottom {
   padding: 1em;
   list-style-type: none;
+  text-align: center;
 }
 #main-footer {
   background: #df5911;
   padding: 1em;
+  overflow: auto;
 }
 #footer-sidebar {
   list-style-type: none;
+  float: left;
+}
+#nav-social {
+  list-style-type: none;
+  float: right;
+}
+#nav-social li {
+  display: inline-block;
 }
 /* Gross Hacks */
 #mc_embed_signup_scroll {
@@ -326,16 +318,10 @@ blockquote cite {
 .woocommerce #sidebar {
   display: none;
 }
-.column {
-  text-align: center;
-}
 @media only screen and (max-width: 767px) {
   .column {
     width: 100% !important;
   }
-}
-a {
-  color: #b81417;
 }
 /* Breakpoints */
 /* iPads (portrait and landscape) ----------- */
@@ -357,7 +343,7 @@ a {
     margin: auto;
     overflow: auto;
     clear: both;
-    background: transparent url('images/course-leaf.jpg') center 40px no-repeat;
+    background: transparent url('images/course-leaf.jpg') center 2.5em no-repeat;
   }
   .dsq-course-inner {
     float: left;
@@ -400,7 +386,7 @@ a {
     float: right;
     font-size: 13.5px;
     font-weight: 700;
-    padding: 1em 1em 0;
+    padding: 1em;
     text-transform: uppercase;
     -moz-column-count: 2;
     -moz-column-gap: 1em;
@@ -419,18 +405,5 @@ a {
   }
   #main-navigation-large ul a:hover {
     color: #f9fbfb;
-  }
-  #nav-social {
-    clear: both;
-    display: block;
-    float: right;
-    list-style-type: none;
-    padding: 0 3em 1em;
-  }
-  #nav-social li {
-    display: inline-block;
-  }
-  #nav-social li a {
-    text-decoration: none;
   }
 }
